@@ -11,19 +11,34 @@ submitBtn.addEventListener("click", function () {
 
     for (let i = 0; i < inputWord.length; i++) {
         letters.push(inputWord[i]);
-        invertWord = letters.reverse();
+
     }
+    // invertWord = letters.reverse();
     console.log(letters);
 
-    invertWord = letters.reverse();
+    // invertWord = letters.reverse();
 
-    console.log(invertWord);
+    // console.log(invertWord);
 
-    if (invertWord === inputWord) {
-        console.log("la parola è palindroma")
+    function revWord() {
+        let invertWord = letters.reverse().join("");
+        console.log(invertWord)
+        if (invertWord === letJoin) {
+            console.log("è palindroma");
+            document.getElementById("wordResults").innerHTML = ("La parola è palindroma");
 
-    } else if (invertWord === inputWord) {
-        console.log("la parola non è palindroma")
+        } else if (invertWord !== letJoin) {
+            console.log("non è palindroma");
+            document.getElementById("wordResults").innerHTML = ("La parola non è palindroma");
+
+        }
+        return (invertWord);
     }
+    letJoin = letters.join("");
+    console.log(letJoin);
+    console.log(revWord());
+
+
+
 
 })
