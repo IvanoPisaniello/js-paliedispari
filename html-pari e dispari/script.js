@@ -12,7 +12,7 @@ function randomPc(maxNum) {
 
 
 
-console.log("numero random creato" + randomPc(max));
+// console.log("numero random creato" + randomPc(max));
 
 
 submitBtn.addEventListener("click", function () {
@@ -26,20 +26,38 @@ submitBtn.addEventListener("click", function () {
     let sum = (parseInt(random) + parseInt(inputNumber));
     console.log("somma:" + sum);
 
+    document.getElementById("yourNumber").innerHTML = ("Il numero selezionato è:" + " " + (inputNumber))
+    document.getElementById("pcNumber").innerHTML = ("Il numero del pc è:" + " " + (random))
+    document.getElementById("sumNumber").innerHTML = ("La somma dei numeri è:" + " " + (sum))
+    sumOdd = (false);
 
 
 
-    if (sum === evenOdd(num)) {
-        console.log("il numero è pari");
-    } else if (sum === evenOdd(1)) {
-        console.log("il numero è dispari");
+    function isEven(sumEven) {
+
+        return sum % 2 === 0;
+
     }
 
 
-    function evenOdd(num) {
-        let oddNumber = (parseInt(sum) % 2 === parseInt(num));
-        return (oddNumber);
+
+    if (isEven(sumOdd) === true) {
+        console.log("il numero è pari")
+        document.getElementById("oddEven").innerHTML = ("Il numero è pari")
+    } else if (isEven(sumOdd) === false) {
+        console.log("il numero è dispari")
+        document.getElementById("oddEven").innerHTML = ("Il numero è dispari")
+
     }
+    if (isEven(sumOdd) === true && chose === "pari") {
+        document.getElementById("win").innerHTML = ("Hai vinto")
+
+
+    } else {
+        document.getElementById("win").innerHTML = ("Hai perso")
+
+    }
+
 
 })
 
