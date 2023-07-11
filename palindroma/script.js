@@ -1,5 +1,10 @@
 const submitBtn = document.getElementById("submitbtn");
+const resetBtn = document.getElementById("resetBtn");
 
+
+resetBtn.addEventListener("click", function () {
+    location.reload();
+})
 
 
 let letters = [];
@@ -13,12 +18,7 @@ submitBtn.addEventListener("click", function () {
         letters.push(inputWord[i]);
 
     }
-    // invertWord = letters.reverse();
     console.log(letters);
-
-    // invertWord = letters.reverse();
-
-    // console.log(invertWord);
 
     function revWord() {
         let invertWord = letters.reverse().join("");
