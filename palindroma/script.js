@@ -7,11 +7,12 @@ resetBtn.addEventListener("click", function () {
 })
 
 
-let letters = [];
+
 submitBtn.addEventListener("click", function () {
     inputWord = document.getElementById("inputWord").value;
     console.log(inputWord);
 
+    let letters = [];
 
 
     for (let i = 0; i < inputWord.length; i++) {

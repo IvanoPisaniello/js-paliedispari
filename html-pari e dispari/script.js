@@ -55,7 +55,7 @@ submitBtn.addEventListener("click", function () {
         document.getElementById("oddEven").innerHTML = ("Il numero è dispari")
 
     }
-    if (isEven(sumOdd) === true && chose === "pari") {
+    else if (isEven(sumOdd) === true && chose === "pari") {
         document.getElementById("win").innerHTML = ("Hai vinto")
 
 
