@@ -11,6 +11,12 @@ function randomPc(maxNum) {
 }
 
 
+const resetBtn = document.getElementById("resetBtn");
+
+
+resetBtn.addEventListener("click", function () {
+    location.reload();
+})
 
 // console.log("numero random creato" + randomPc(max));
 
@@ -53,16 +59,13 @@ submitBtn.addEventListener("click", function () {
         document.getElementById("win").innerHTML = ("Hai vinto")
 
 
-    } else {
+    } else if (isEven(sumOdd) === true && chose === "dispari") {
         document.getElementById("win").innerHTML = ("Hai perso")
 
     }
 
 
 })
-
-
-
 
 
 
